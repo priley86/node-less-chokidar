@@ -59,7 +59,7 @@ const getOptions = (args, options) => {
 		options.dest = path.resolve(args[1]);
 	} else if (options.output) {
 		options.dest = path.join(
-			path.dirname(options.src),
+			options.output,
 			[path.basename(options.src, path.extname(options.src)), '.css'].join('')
 		); // replace ext.
 	}
